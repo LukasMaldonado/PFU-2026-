@@ -1,13 +1,12 @@
-"""Ejercicio 87: Leer 10 números y determinar el mayor y el menor.
-Usa: Para + Si + Asignar."""
+#Ejercicio 87: Leer 10 números y determinar el mayor y el menor. Usa: Para + Si + Asignar.
 
 
 def leer_numero(mensaje):
     while True:
         try:
-            return float(input(mensaje))
+            return int(input(mensaje))
         except ValueError:
-            print("Entrada inválida. Ingresa un número.")
+            print("no podes meter eso pe.")
 
 
 class MayorMenor:
@@ -29,8 +28,8 @@ class MayorMenor:
                     self.menor = numero
 
     def mostrar_resultado(self):
-        print(f"\nMayor: {self.mayor}")
-        print(f"Menor: {self.menor}")
+        print("Mayor: ",self.mayor)
+        print("Menor: ",self.menor)
 
 
 if __name__ == "__main__":

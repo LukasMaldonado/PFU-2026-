@@ -1,5 +1,4 @@
-"""Ejercicio 88: Leer N números y calcular suma y promedio.
-Usa: Para + acumulador."""
+#Ejercicio 88: Leer N números y calcular suma y promedio. Usa: Para + acumulador.
 
 
 def leer_entero_positivo(mensaje):
@@ -8,23 +7,23 @@ def leer_entero_positivo(mensaje):
             valor = int(input(mensaje))
             if valor > 0:
                 return valor
-            print("Debe ser mayor que 0.")
+            print("Debe ser mayor que 0 puesh")
         except ValueError:
-            print("Entrada inválida. Ingresa un número entero.")
+            print("no sirve, tiene ke ser valido.")
 
 
 def leer_numero(mensaje):
     while True:
         try:
-            return float(input(mensaje))
+            return int(input(mensaje))
         except ValueError:
-            print("Entrada inválida. Ingresa un número.")
+            print("no sirve, pon otro numero")
 
 
 class SumaPromedio:
     def __init__(self, n):
         self.n = n
-        self.suma = 0.0
+        self.suma = 0
 
     def leer_numeros(self):
         for i in range(1, self.n + 1):
@@ -34,12 +33,12 @@ class SumaPromedio:
         return self.suma / self.n
 
     def mostrar_resultado(self):
-        print(f"\nSuma: {self.suma}")
+        print(f"Suma: {self.suma}")
         print(f"Promedio: {self.promedio():.2f}")
 
 
 if __name__ == "__main__":
-    n = leer_entero_positivo("¿Cuántos números deseas ingresar? ")
+    n = leer_entero_positivo("¿Cuántos números quieres ingresar? ")
     app = SumaPromedio(n)
     app.leer_numeros()
     app.mostrar_resultado()

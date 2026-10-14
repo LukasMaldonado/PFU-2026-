@@ -1,6 +1,4 @@
-"""Ejercicio 99: Leer N edades y determinar cuántas corresponden a niños,
-adolescentes, adultos y adultos mayores.
-Usa: Para + Si."""
+#Ejercicio 99: Leer N edades y determinar cuántas corresponden a niños,adolescentes, adultos y adultos mayores.Usa: Para + Si.
 
 
 def leer_entero_positivo(mensaje):
@@ -46,10 +44,10 @@ class ClasificadorEdades:
                 self.adultos_mayores += 1
 
     def mostrar_resultado(self):
-        print(f"\nNiños (0-11): {self.ninos}")
-        print(f"Adolescentes (12-17): {self.adolescentes}")
-        print(f"Adultos (18-59): {self.adultos}")
-        print(f"Adultos mayores (60+): {self.adultos_mayores}")
+        print("Niños (0-11): ",self.ninos)
+        print("Adolescentes (12-17): ",self.adolescentes)
+        print("Adultos (18-59): ",self.adultos)
+        print("Adultos mayores (60+): ",self.adultos_mayores)
 
 
 if __name__ == "__main__":

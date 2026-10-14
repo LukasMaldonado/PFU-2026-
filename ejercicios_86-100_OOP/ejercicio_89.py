@@ -1,5 +1,4 @@
-"""Ejercicio 89: Leer N números y determinar cuántos son positivos, negativos y cero.
-Usa: Para + Si."""
+#Ejercicio 89: Leer N números y determinar cuántos son positivos, negativos y cero. Usa: Para + Si.
 
 
 def leer_entero_positivo(mensaje):
@@ -8,17 +7,17 @@ def leer_entero_positivo(mensaje):
             valor = int(input(mensaje))
             if valor > 0:
                 return valor
-            print("Debe ser mayor que 0.")
+            print("tiene ke ser mayor ke 0.")
         except ValueError:
-            print("Entrada inválida. Ingresa un número entero.")
+            print("ingresa otro numero papi.")
 
 
 def leer_numero(mensaje):
     while True:
         try:
-            return float(input(mensaje))
+            return int(input(mensaje))
         except ValueError:
-            print("Entrada inválida. Ingresa un número.")
+            print("ingresa otro numero papi.")
 
 
 class ClasificadorSigno:
@@ -39,13 +38,13 @@ class ClasificadorSigno:
                 self.ceros += 1
 
     def mostrar_resultado(self):
-        print(f"\nPositivos: {self.positivos}")
-        print(f"Negativos: {self.negativos}")
-        print(f"Ceros: {self.ceros}")
+        print("Positivos: ",self.positivos)
+        print("Negativos: ",self.negativos)
+        print("Ceros: ",self.ceros)
 
 
 if __name__ == "__main__":
-    n = leer_entero_positivo("¿Cuántos números deseas ingresar? ")
+    n = leer_entero_positivo("¿Cuántos números quieres ingresar? ")
     app = ClasificadorSigno(n)
     app.leer_numeros()
     app.mostrar_resultado()

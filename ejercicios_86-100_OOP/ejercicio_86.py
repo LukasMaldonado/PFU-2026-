@@ -1,13 +1,11 @@
-"""Ejercicio 86: Leer 10 números y determinar cuántos son pares y cuántos impares.
-Usa: Para + Si."""
-
+#Ejercicio 86: Leer 10 números y determinar cuántos son pares y cuántos impares. Usa: Para + Si.
 
 def leer_entero(mensaje):
     while True:
         try:
             return int(input(mensaje))
         except ValueError:
-            print("Entrada inválida. Ingresa un número entero.")
+            print("no podes meter eso pe.")
 
 
 class ContadorParesImpares:
@@ -25,8 +23,8 @@ class ContadorParesImpares:
                 self.impares += 1
 
     def mostrar_resultado(self):
-        print(f"\nPares: {self.pares}")
-        print(f"Impares: {self.impares}")
+        print("Pares: ",self.pares)
+        print("Impares: ",self.impares)
 
 
 if __name__ == "__main__":

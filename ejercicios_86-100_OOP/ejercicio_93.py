@@ -1,22 +1,18 @@
-"""Ejercicio 93: Solicitar notas de estudiantes hasta finalizar y calcular
-promedio, mayor y menor.
-Usa: Mientras + Si.
-Para finalizar, ingresa -1."""
+#Ejercicio 93: Solicitar notas de estudiantes hasta finalizar y calcularpromedio, mayor y menor.Usa: Mientras + Si.Para finalizar, ingresa -1.
 
 
 def leer_numero(mensaje):
     while True:
         try:
-            return float(input(mensaje))
+            return int(input(mensaje))
         except ValueError:
-            print("Entrada inválida. Ingresa un número.")
-
+            print("no sirve papi pone otro numero")
 
 class RegistroNotas:
     CENTINELA = -1
 
     def __init__(self):
-        self.suma = 0.0
+        self.suma = 0
         self.cantidad = 0
         self.mayor = None
         self.menor = None
@@ -40,12 +36,12 @@ class RegistroNotas:
 
     def mostrar_resultado(self):
         if self.cantidad == 0:
-            print("\nNo se ingresaron notas.")
+            print("No se ingresaron notas.")
             return
-        print(f"\nCantidad de notas: {self.cantidad}")
-        print(f"Promedio: {self.suma / self.cantidad:.2f}")
-        print(f"Nota mayor: {self.mayor}")
-        print(f"Nota menor: {self.menor}")
+        print("Cantidad de notas: ",self.cantidad)
+        print("Promedio: {self.suma / self.cantidad:.2f}")
+        print("Nota mayor: ",self.mayor)
+        print("Nota menor: ",self.menor)
 
 
 if __name__ == "__main__":

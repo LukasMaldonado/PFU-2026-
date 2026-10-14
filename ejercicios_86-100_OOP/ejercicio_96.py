@@ -1,12 +1,9 @@
-"""Ejercicio 96: Ingresar productos y precios hasta seleccionar Finalizar.
-Mostrar el total.
-Usa: Repetir + Según (match) + acumulador."""
-
+#Ejercicio 96: Ingresar productos y precios hasta seleccionar Finalizar.Mostrar el total.Usa: Repetir + Según (match) + acumulador.
 
 def leer_precio(mensaje):
     while True:
         try:
-            precio = float(input(mensaje))
+            precio = int(input(mensaje))
             if precio >= 0:
                 return precio
             print("El precio no puede ser negativo.")
@@ -17,25 +14,24 @@ def leer_precio(mensaje):
 class Carrito:
     def __init__(self):
         self.productos = []
-        self.total = 0.0  # acumulador
+        self.total = 0  # acumulador
 
     def agregar(self, nombre, precio):
         self.productos.append((nombre, precio))
         self.total += precio
 
     def mostrar_resumen(self):
-        print("\n--- RESUMEN DE COMPRA ---")
+        print("--- RESUMEN DE COMPRA ---")
         for nombre, precio in self.productos:
             print(f"{nombre}: {precio:.2f}")
         print(f"TOTAL: {self.total:.2f}")
-
 
 class Menu:
     def __init__(self):
         self.carrito = Carrito()
 
     def mostrar(self):
-        print("\n1. Agregar producto")
+        print("1. Agregar producto")
         print("2. Finalizar")
 
     def ejecutar(self):

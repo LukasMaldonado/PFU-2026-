@@ -1,11 +1,10 @@
-"""Ejercicio 98: Ingresar 10 notas, clasificar aprobadas/reprobadas y mostrar estadísticas.
-Usa: Para + Si."""
+#Ejercicio 98: Ingresar 10 notas, clasificar aprobadas/reprobadas y mostrar estadísticas.Usa: Para + Si.
 
 
 def leer_nota(mensaje):
     while True:
         try:
-            nota = float(input(mensaje))
+            nota = int(input(mensaje))
             if 0 <= nota <= 100:
                 return nota
             print("La nota debe estar entre 0 y 100.")
@@ -20,7 +19,7 @@ class AnalisisNotas:
         self.cantidad = cantidad
         self.aprobadas = 0
         self.reprobadas = 0
-        self.suma = 0.0
+        self.suma = 0
         self.mayor = None
         self.menor = None
 
@@ -40,12 +39,12 @@ class AnalisisNotas:
                 self.menor = nota
 
     def mostrar_estadisticas(self):
-        print("\n--- ESTADÍSTICAS ---")
-        print(f"Aprobadas: {self.aprobadas}")
-        print(f"Reprobadas: {self.reprobadas}")
+        print("--- ESTADÍSTICAS ---")
+        print("Aprobadas: ",self.aprobadas)
+        print("Reprobadas: ",self.reprobadas)
         print(f"Promedio: {self.suma / self.cantidad:.2f}")
-        print(f"Nota mayor: {self.mayor}")
-        print(f"Nota menor: {self.menor}")
+        print("Nota mayor: ",self.mayor)
+        print("Nota menor: ",self.menor)
 
 
 if __name__ == "__main__":

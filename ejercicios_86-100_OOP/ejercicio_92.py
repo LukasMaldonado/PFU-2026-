@@ -1,40 +1,32 @@
-"""Ejercicio 92: Menú de figuras geométricas que permita calcular áreas repetidamente.
-Usa: Repetir + Según (match) + Si."""
+#Ejercicio 92: Menú de figuras geométricas que permita calcular áreas repetidamente.Usa: Repetir + Según (match) + Si.
 import math
 
 
 def leer_positivo(mensaje):
     while True:
         try:
-            valor = float(input(mensaje))
+            valor = int(input(mensaje))
             if valor > 0:
                 return valor
-            print("El valor debe ser mayor que 0.")
+            print("tiene ke ser mayor ke 0.")
         except ValueError:
-            print("Entrada inválida. Ingresa un número.")
+            print("no sirve papi otro numero mejor")
 
 
 class Figuras:
-    @staticmethod
     def area_circulo(radio):
         return math.pi * radio ** 2
-
-    @staticmethod
     def area_rectangulo(base, altura):
         return base * altura
-
-    @staticmethod
     def area_triangulo(base, altura):
         return (base * altura) / 2
-
-    @staticmethod
     def area_cuadrado(lado):
         return lado ** 2
 
 
 class Menu:
     def mostrar(self):
-        print("\n--- ÁREAS DE FIGURAS ---")
+        print("--- ÁREAS DE FIGURAS ---")
         print("1. Círculo")
         print("2. Rectángulo")
         print("3. Triángulo")

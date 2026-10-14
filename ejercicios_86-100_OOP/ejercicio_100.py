@@ -1,6 +1,4 @@
-"""Ejercicio 100: Menú para factorial, tabla de multiplicar, paridad y cuadrado;
-repetir hasta Salir.
-Usa: Repetir + Según (match) + Si."""
+#Ejercicio 100: Menú para factorial, tabla de multiplicar, paridad y cuadrado;repetir hasta Salir.Usa: Repetir + Según (match) + Si.
 
 
 def leer_entero(mensaje):
@@ -12,29 +10,21 @@ def leer_entero(mensaje):
 
 
 class Operaciones:
-    @staticmethod
     def factorial(n):
         resultado = 1
         for i in range(2, n + 1):
             resultado *= i
         return resultado
-
-    @staticmethod
     def tabla_multiplicar(n, limite=10):
         return [f"{n} x {i} = {n * i}" for i in range(1, limite + 1)]
-
-    @staticmethod
     def es_par(n):
         return n % 2 == 0
-
-    @staticmethod
     def cuadrado(n):
         return n ** 2
 
-
 class Menu:
     def mostrar(self):
-        print("\n--- MENÚ ---")
+        print("--- MENÚ ---")
         print("1. Factorial")
         print("2. Tabla de multiplicar")
         print("3. Paridad")

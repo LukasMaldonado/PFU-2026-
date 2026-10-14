@@ -1,12 +1,10 @@
-"""Ejercicio 97: Menú bancario para consultar saldo, depositar, retirar y salir;
-validar fondos suficientes.
-Usa: Repetir + Según (match) + Si."""
+#Ejercicio 97: Menú bancario para consultar saldo, depositar, retirar y salir;validar fondos suficientes.Usa: Repetir + Según (match) + Si.
 
 
 def leer_monto(mensaje):
     while True:
         try:
-            monto = float(input(mensaje))
+            monto = int(input(mensaje))
             if monto > 0:
                 return monto
             print("El monto debe ser mayor que 0.")
@@ -36,7 +34,7 @@ class Menu:
         self.cuenta = CuentaBancaria()
 
     def mostrar(self):
-        print("\n--- MENÚ BANCARIO ---")
+        print("--- MENÚ BANCARIO ---")
         print("1. Consultar saldo")
         print("2. Depositar")
         print("3. Retirar")

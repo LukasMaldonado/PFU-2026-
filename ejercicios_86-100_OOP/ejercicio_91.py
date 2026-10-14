@@ -1,5 +1,4 @@
-"""Ejercicio 91: Calculadora que permita realizar operaciones hasta seleccionar Salir.
-Usa: Repetir + Según (match)."""
+#Ejercicio 91: Calculadora que permita realizar operaciones hasta seleccionar Salir.Usa: Repetir + Según (match).
 
 
 def leer_numero(mensaje):
@@ -7,7 +6,7 @@ def leer_numero(mensaje):
         try:
             return float(input(mensaje))
         except ValueError:
-            print("Entrada inválida. Ingresa un número.")
+            print("no sirve papi pone otro numero")
 
 
 class Calculadora:
@@ -31,7 +30,7 @@ class Menu:
         self.calculadora = Calculadora()
 
     def mostrar(self):
-        print("\n--- CALCULADORA ---")
+        print("--- CALCULADORA ---")
         print("1. Sumar")
         print("2. Restar")
         print("3. Multiplicar")
@@ -58,14 +57,13 @@ class Menu:
                         case "4":
                             resultado = self.calculadora.dividir(a, b)
                     if resultado is None:
-                        print("Error: no se puede dividir entre cero.")
+                        print("no se puede dividir entre cero papi")
                     else:
-                        print(f"Resultado: {resultado}")
+                        print("Resultado: ",resultado)
                 case "5":
-                    print("¡Hasta luego!")
+                    print("gus bai")
                 case _:
-                    print("Opción inválida.")
-
+                    print("no sirve papi")
 
 if __name__ == "__main__":
     Menu().ejecutar()

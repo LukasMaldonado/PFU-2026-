@@ -1,6 +1,4 @@
-"""Ejercicio 90: Mostrar la tabla de multiplicar de un número y permitir repetir
-el proceso para diferentes números.
-Usa: Repetir + Para."""
+# Ejercicio 90: Mostrar la tabla de multiplicar de un número y permitir repetirel proceso para diferentes números.Usa: Repetir + Para.
 
 
 def leer_entero(mensaje):
@@ -8,7 +6,7 @@ def leer_entero(mensaje):
         try:
             return int(input(mensaje))
         except ValueError:
-            print("Entrada inválida. Ingresa un número entero.")
+            print("no bro otro numero pone")
 
 
 class TablaMultiplicar:
@@ -17,7 +15,7 @@ class TablaMultiplicar:
         self.limite = limite
 
     def mostrar(self):
-        print(f"\nTabla del {self.numero}")
+        print("Tabla del ",self.numero)
         for i in range(1, self.limite + 1):
             print(f"{self.numero} x {i} = {self.numero * i}")
 
@@ -27,7 +25,7 @@ class Programa:
         while True:  # Repetir
             numero = leer_entero("Ingresa un número: ")
             TablaMultiplicar(numero).mostrar()
-            respuesta = input("\n¿Deseas ver otra tabla? (s/n): ").strip().lower()
+            respuesta = input("¿Deseas ver otra tabla? (s/n): ").strip().lower()
             if respuesta != "s":
                 break
         print("¡Hasta luego!")

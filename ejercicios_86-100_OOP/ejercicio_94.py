@@ -1,6 +1,4 @@
-"""Ejercicio 94: Registrar edades hasta ingresar 0 y determinar la cantidad
-de mayores y menores de edad.
-Usa: Mientras + Si."""
+#Ejercicio 94: Registrar edades hasta ingresar 0 y determinar la cantidadde mayores y menores de edad.Usa: Mientras + Si.
 
 
 def leer_entero(mensaje):
@@ -8,8 +6,7 @@ def leer_entero(mensaje):
         try:
             return int(input(mensaje))
         except ValueError:
-            print("Entrada inválida. Ingresa un número entero.")
-
+            print("pone otro numero papi")
 
 class RegistroEdades:
     MAYORIA_EDAD = 18
@@ -23,6 +20,8 @@ class RegistroEdades:
         while edad != 0:
             if edad < 0:
                 print("La edad no puede ser negativa.")
+            elif edad > 100:
+                print("se pasa de la edad maxima.")
             elif edad >= self.MAYORIA_EDAD:
                 self.mayores += 1
             else:
@@ -30,8 +29,8 @@ class RegistroEdades:
             edad = leer_entero("Edad (0 para terminar): ")
 
     def mostrar_resultado(self):
-        print(f"\nMayores de edad: {self.mayores}")
-        print(f"Menores de edad: {self.menores}")
+        print("Mayores de edad: ",self.mayores)
+        print("Menores de edad: ",self.menores)
 
 
 if __name__ == "__main__":

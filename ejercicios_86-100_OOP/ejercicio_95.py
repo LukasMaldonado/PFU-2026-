@@ -1,13 +1,11 @@
-"""Ejercicio 95: Leer números hasta 0 y determinar pares, impares, positivos y negativos.
-Usa: Mientras + operadores."""
-
+#Ejercicio 95: Leer números hasta 0 y determinar pares, impares, positivos y negativos.Usa: Mientras + operadores.
 
 def leer_entero(mensaje):
     while True:
         try:
             return int(input(mensaje))
         except ValueError:
-            print("Entrada inválida. Ingresa un número entero.")
+            print("otro numero papi")
 
 
 class AnalizadorNumeros:
@@ -35,10 +33,10 @@ class AnalizadorNumeros:
             numero = leer_entero("Número (0 para terminar): ")
 
     def mostrar_resultado(self):
-        print(f"\nPares: {self.pares}")
-        print(f"Impares: {self.impares}")
-        print(f"Positivos: {self.positivos}")
-        print(f"Negativos: {self.negativos}")
+        print("Pares: ",self.pares)
+        print("Impares: ",self.impares)
+        print("Positivos: ",self.positivos)
+        print("Negativos: ",self.negativos)
 
 
 if __name__ == "__main__":
